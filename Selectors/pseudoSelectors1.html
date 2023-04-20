@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* :root selector we can assign variable to a particular and use them when we needed*/
+      :root {
+        --bgcolor: lightblue;
+        --color: blue;
+      }
+      h1 {
+        color: var(--color);
+      }
+      p {
+        padding: 10px;
+        background-color: var(--bgcolor);
+        color: var(--color);
+      }
+
+      /* it is used to select direct first and last child of the class=firstlust*/
+      .firstlist li:first-child {
+        color: var(--color);
+      }
+      .firstlist li:last-child {
+        color: aquamarine;
+      }
+      .secondlist li:last-child {
+        /* it will select all the last child in the list,but we are using 
+        selector which is less pirority to the class selector*/
+        color: blueviolet;
+      }
+
+      /* n-th child and n-th last child selector*/
+      li:nth-child(5) {
+        color: yellowgreen;
+        font-weight: bold;
+      }
+      /* we use the formula's also 
+        2n
+        2n+1
+        3n-1
+        2n+2
+        */
+      .l2 li:nth-child(2n + 2) {
+        color: green;
+      }
+      /*nth-last-child is used select the element down to up orders*/
+      .l2 li:nth-last-child(2) {
+        /* it will select the 9 th of l2 class, it counts down to up*/
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- First pseudoselector is :root-->
+    <h1>:root the selector</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+      dolorem? Esse, rerum laboriosam minus ipsum tempore velit explicabo
+      dignissimos? Velit necessitatibus assumenda aliquid illum nam dolorem
+      nihil, cupiditate id. Veniam? Necessitatibus aliquam non provident nam
+      esse odit a, fugit rtus. Quas, sed? Ducimus beatae est laudantium totam
+      rerum odio qui, neque alias nihil debitis quaerat voluptas nostrum
+      deleniti. Natus ratione earum, repudiandae quo vero aspernatur cum,
+      debitis corrupti optio aliquid consectetur deserunt iste exercitationem
+      illum in dolore quam rerum tempore! Ducimus, aperiam expedita in sunt
+      harum illo nobis. Fugit cupiditate non optio sapiente quod quas a
+      consequatur, recusandae pariatur perspiciatis ratione voluptate tempora
+      quisquam minima. Reiciendis quam error nesciunt! Repellat eveniet tenetur
+      exercitationem minima dolorum possimus doloremque debitis. Ullam, tenetur.
+      Ullam mollitia, cum inventore fuga eos dolores! A, debitis praesentium.
+      Blanditiis nostrum nihil soluta totam consequatur repellendus nobis
+      praesentium architecto!
+    </p>
+
+    <!--:first child and last child selector-->
+    <ul class="firstlist">
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+    </ul>
+    <ul class="secondlist">
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+      <li>Lorem, ipsum dolor sit amet consectetur</li>
+    </ul>
+
+    <!-- n-th child and n-th-last-child selector -->
+    <ul class="l1">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+      <li>item6</li>
+      <li>item7</li>
+      <li>item8</li>
+      <li>item9</li>
+      <li>item10</li>
+    </ul>
+    <ul class="l2">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+      <li>item6</li>
+      <li>item7</li>
+      <li>item8</li>
+      <li>item9</li>
+      <li>item10</li>
+    </ul>
+  </body>
+</html>
